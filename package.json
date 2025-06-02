@@ -1,0 +1,30 @@
+{
+  "name": "classsync",
+  "version": "1.0.0",
+  "description": "ClassSync - School Management System - MERN Stack",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install-all": "npm install && npm install --prefix client",
+    "build": "npm run build --prefix client",
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.3"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "nodemon": "^2.0.22"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
